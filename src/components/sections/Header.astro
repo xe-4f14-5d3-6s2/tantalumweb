@@ -7,13 +7,14 @@ import { ChevronDown } from "@lucide/astro";
 
 <header class="flex justify-center items-center h-dvh">
   <div
-    class="z-0 opacity-60 h-dvh w-dvw absolute bg-center bg-no-repeat bg-origin-border mask-b-to-85% mask-b-from-15%"
+    class="z-0 opacity-50 h-dvh w-dvw absolute bg-center bg-no-repeat bg-origin-border mask-b-to-85% mask-b-from-15%"
     style={"background-image: url(" + bgimg.src + ");"}
   >
   </div>
   <div class="z-1 flex flex-col justify-center items-center">
     <h3
-      class="text-2xl text-sky-300 text-center mb-6 tracking-widest font-bold"
+      id="title-top"
+      class="opacity-0 text-2xl text-sky-300 text-center mb-6 tracking-widest font-bold"
     >
       PHYSICIST & DEVELOPER
     </h3>
@@ -30,38 +31,70 @@ import { ChevronDown } from "@lucide/astro";
       >
     </h1>
     <p
-      class="text-slate-400 text-2xl text-center mb-10 tracking-tighter font-light"
+      id="title-bottom"
+      class="opacity-0 text-slate-400 text-2xl text-center mb-10 tracking-tighter font-light"
     >
       Building digital experiences that blur the line between reality and the
       web.
     </p>
-
-    <Button filled={false} link="#">EXPLORE WORK <ChevronDown /> </Button>
+    <span class="opacity-0" id="title-button">
+      <Button filled={false} link="#">EXPLORE WORK <ChevronDown /> </Button>
+    </span>
   </div>
 </header>
 
 <script>
   import { gsap } from "gsap";
 
-  gsap.to("#title-parentesis-1", {
-    width: "auto",
-    opacity: 1,
-    delay: 1.5,
-    duration: 0.8,
-    ease: "power3.out",
-  });
+  let timeline = gsap.timeline();
 
-  gsap.to("#title-parentesis-2", {
-    width: "auto",
-    opacity: 1,
-    delay: 1.5,
-    duration: 0.8,
-    ease: "power3.out",
-                           });
-
-                           gsap.to("#title-talum", {
-                           color: "#c6d2ff",
-                            delay: 1.9,
-                            duration: 0.5
-                           })
+  timeline
+    .to("#title-parentesis-1", {
+      width: "auto",
+      opacity: 1,
+      delay: 1,
+      duration: 0.8,
+      ease: "power1.out",
+    })
+    .to(
+      "#title-parentesis-2",
+      {
+        width: "auto",
+        delay: 1,
+        opacity: 1,
+        duration: 0.8,
+        ease: "power1.out",
+      },
+      0,
+    )
+    .to("#title-talum", {
+      color: "#c6d2ff",
+      duration: 0.2,
+    })
+    .fromTo(
+      "#title-top",
+      {
+        y: 100,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "expo.out",
+      },
+    )
+    .fromTo(
+      "#title-bottom",
+      {
+        y: -100,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        ease: "expo.out",
+      },
+      "<50%",
+    )
+    .to("#title-button", {
+      opacity: 1,
+    });
 </script>
