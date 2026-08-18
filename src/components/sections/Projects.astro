@@ -1,0 +1,27 @@
+---
+import Project from "../Project.astro";
+
+import { projects } from "@/lib/config.ts";
+---
+
+<section class="flex flex-col px-12 bg-linear-to-b from-gray-900 to-black">
+  <h2 class="text-6xl font-black mb-12">
+    RECENT <span class="text-indigo-700">PROJECTS</span>
+  </h2>
+
+  <div class="flex flex-col gap-20">
+    {
+      projects.map((project, index) => (
+        <Project
+          side={index % 2 === 0 ? "" : "flex-row-reverse"}
+          img={project.img}
+          subname={project.subname}
+          name={project.name}
+          description={project.description}
+          techs={project.techs}
+          link={project.link}
+        />
+      ))
+    }
+  </div>
+</section>
