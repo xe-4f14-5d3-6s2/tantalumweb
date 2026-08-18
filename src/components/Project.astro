@@ -6,18 +6,21 @@ interface Props {
   description: string;
   techs: string[];
   link: string;
-  side:string,
+  side: string;
 }
 
 const { img, subname, name, description, techs, link, side } = Astro.props;
 
 import { Icon } from "astro-icon/components";
-
 ---
 
-<div class={"flex gap-20 "+side}>
+<div class={"flex gap-20 " + side}>
   <div class="w-[50%]">
-    <img src={img} class="w-full" alt={description} />
+    <img
+      src={img}
+      class="w-full rounded-4xl mask-x-from-70% mask-x-to-90% mask-y-from-70% mask-y-to-90%"
+      alt={description}
+    />
   </div>
   <div class="w-[50%] flex flex-col text-left justify-between my-4">
     <p class="text-2xl tracking-wide font-bold text-indigo-200">{subname}</p>
@@ -29,7 +32,7 @@ import { Icon } from "astro-icon/components";
     <div class="flex gap-5">
       {
         techs.map((tech) => (
-          <p class="tracking-tight text-center p-2 border border-gray-400 text-sm rounded-2xl">
+          <p class="tracking-tight leading-0 flex items-center justify-center text-center p-4 border border-gray-400 text-sm rounded-sm">
             {tech}
           </p>
         ))
@@ -38,8 +41,9 @@ import { Icon } from "astro-icon/components";
 
     <a
       href={link}
-      class="flex gap-2 justify-center items-center text-2xl font-bold tracking-wider"
-      >VIEW DETAILS <Icon name="tabler:external-link" /></a
+      target="_blank"
+      class="transition focus:text-shadow-lg text-shadow-sky-300 flex gap-2 items-center text-2xl font-bold tracking-wider"
+      ><p>VIEW DETAILS</p> <Icon name="tabler:external-link" /></a
     >
   </div>
 </div>

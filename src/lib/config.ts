@@ -2,7 +2,6 @@ import p1img from "@/assets/projects/dracocraftweb.webp"
 import p2img from "@/assets/projects/73rsa.webp"
 import p3img from "@/assets/projects/2fa.webp"
 import p4img from "@/assets/projects/livechat.webp"
-import {describe} from "astro:schema"
 
 export const settings = {
   title: "Tantalum",

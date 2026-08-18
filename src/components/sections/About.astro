@@ -5,16 +5,18 @@ import { socials } from "@/lib/config";
 import { Icon } from "astro-icon/components";
 ---
 
-<section
-  class="flex gap-12 h-dvh px-12 justify-center items-center bg-linear-to-b from-black to-gray-900"
+<section id="about"
+  class="flex gap-10 h-dvh px-12 justify-center items-center bg-linear-to-b from-black to-gray-900"
 >
-  <div>
+  <div class="w-[50%] flex flex-col justify-between">
     <h2
       class="text-6xl font-black text-left mb-10 bg-linear-to-r to-sky-300 from-indigo-700 bg-clip-text text-transparent"
     >
       ABOUT ME
     </h2>
-    <p class="text-2xl tracking-tight leading-none mb-10 font-light text-gray-400">
+    <p
+      class="text-2xl tracking-tight leading-none mb-10 font-light text-gray-400"
+    >
       I am a front-end developer obsessed with crafting high-performance,
       visually striking web applications. I bridge the gap between design and
       engineering.<br /><br />My approach is simple: write clean code, design
@@ -31,9 +33,11 @@ import { Icon } from "astro-icon/components";
       }
     </div>
   </div>
-  <img
-    class="w-[60%] object-contain rounded-4xl mask-x-from-70% mask-x-to-90% mask-y-from-70% mask-y-to-90%"
-    src={pcimg.src}
-    alt=""
-  />
+  <div class="w-[50%]">
+    <img
+      class="w-full object-contain rounded-4xl mask-x-from-70% mask-x-to-90% mask-y-from-70% mask-y-to-90%"
+      src={pcimg.src}
+      alt=""
+    />
+  </div>
 </section>
