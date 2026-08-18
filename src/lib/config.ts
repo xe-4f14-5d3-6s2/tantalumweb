@@ -18,6 +18,10 @@ export const socials = [
   {href: "", icon: "tabler:mail-filled"},
 ]
 
+export const skills = [
+  "PYTHON", "TYPESCRIPT", "C", "JULIA", "NIM", "HTML", "CSS", "TAILWINDCSS", "NEXT.JS", "DISCORD.JS", "DISCORD.PY", "ASTRO.JS", "INKSCAPE", "PTERODACTYL", "JEXACTYL", "PAPERMC", "SPIGOT/BUKKIT"
+]
+
 export const projects = [
   {
     img: p1img.src,

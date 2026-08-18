@@ -1,0 +1,20 @@
+---
+import { skills } from "@/lib/config";
+---
+
+<section
+  id="arsenal"
+  class="bg-linear-to-b to-gray-900 from-black flex flex-col justify-center items-center p-12 min-h-dvh"
+>
+  <h2 class="text-4xl font-black mb-12">ARSENAL</h2>
+
+  <div class="grid grid-cols-4 gap-6">
+    {
+      skills.map((skill) => (
+        <p class="transition text-gray-400 hover:text-white hover:border-gray-600 hover:bg-gray-900 text-lg font-bold tracking-wider border border-gray-900 px-12 py-6 text-center">
+          {skill}
+        </p>
+      ))
+    }
+  </div>
+</section>
