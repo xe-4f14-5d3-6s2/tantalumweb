@@ -2,7 +2,7 @@
 import bgimg from "@/assets/background.webp";
 import Button from "@/components/Button.astro";
 
-import { ChevronDown } from "@lucide/astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <header class="flex justify-center items-center h-dvh">
@@ -32,13 +32,15 @@ import { ChevronDown } from "@lucide/astro";
     </h1>
     <p
       id="title-bottom"
-      class="opacity-0 text-slate-400 text-2xl text-center mb-10 tracking-tighter font-light"
+      class="opacity-0 text-white text-2xl text-center mb-10 tracking-tighter font-light"
     >
       Building digital experiences that blur the line between reality and the
       web.
     </p>
     <span class="opacity-0" id="title-button">
-      <Button filled={false} link="#">EXPLORE WORK <ChevronDown /> </Button>
+      <Button filled={false} link="#"
+        >EXPLORE WORK <Icon name="tabler:chevron-down" />
+      </Button>
     </span>
   </div>
 </header>

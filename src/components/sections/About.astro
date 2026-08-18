@@ -1,0 +1,39 @@
+---
+import pcimg from "@/assets/pc.webp";
+
+import { socials } from "@/lib/config";
+import { Icon } from "astro-icon/components";
+---
+
+<section
+  class="flex gap-12 h-dvh px-12 justify-center items-center bg-linear-to-b from-black to-gray-900"
+>
+  <div>
+    <h2
+      class="text-6xl font-black text-left mb-10 bg-linear-to-r to-sky-300 from-indigo-700 bg-clip-text text-transparent"
+    >
+      ABOUT ME
+    </h2>
+    <p class="text-2xl tracking-tight leading-none mb-10">
+      I am a front-end developer obsessed with crafting high-performance,
+      visually striking web applications. I bridge the gap between design and
+      engineering.<br /><br />My approach is simple: write clean code, design
+      without clutter, and deliver experiences that leave a lasting impact. No
+      fluff, just results. (Texto de ejemplo)
+    </p>
+    <div class="flex gap-6">
+      {
+        socials.map((social) => (
+          <a href={social.href} class="text-4xl">
+            <Icon name={social.icon} />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+  <img
+    class="w-[60%] object-contain rounded-4xl mask-x-from-70% mask-x-to-90% mask-y-from-70% mask-y-to-90%"
+    src={pcimg.src}
+    alt=""
+  />
+</section>
