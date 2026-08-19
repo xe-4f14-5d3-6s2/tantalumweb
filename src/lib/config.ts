@@ -1,21 +1,21 @@
 import p1img from "@/assets/projects/dracocraftweb.webp"
 import p2img from "@/assets/projects/73rsa.webp"
 import p3img from "@/assets/projects/2fa.webp"
-import p4img from "@/assets/projects/livechat.webp"
+import p4img from "@/assets/projects/craftingtable.webp"
+import p5img from "@/assets/projects/73neuronalnetwork.webp"
 
 export const settings = {
   title: "Tantalum",
   description: "Condemned to eternal thirst before an unreachable spring.",
   icon: "/favicon.png",
-  url: "tantalum.vercel.app",
-  color: "#d32f2f"
+  url: "https://ta73.dev",
 }
 
 export const socials = [
-  {href: "", icon: "tabler:brand-github-filled"},
-  {href: "", icon: "tabler:brand-discord-filled"},
-  {href: "", icon: "tabler:brand-instagram-filled"},
-  {href: "", icon: "tabler:mail-filled"},
+  {href: "https://github.com/xe-4f14-5d3-6s2/", icon: "tabler:brand-github-filled"},
+  {href: "https://discord.com/users/1324376858933985392", icon: "tabler:brand-discord-filled"},
+  {href: "https://instagram.com/xe.4f14.5d3.6s2", icon: "tabler:brand-instagram-filled"},
+  {href: "mailto:xe.4f14.5d3.6s2@proton.me", icon: "tabler:mail-filled"},
 ]
 
 export const skills = [
@@ -31,11 +31,25 @@ export const projects = [
     techs: ["TYPESCRIPT", "NEXT.JS"],
     link: "https://dracocraft.vercel.app/"
   }, {
+    img:p5img.src,
+    subname: "DATA TRAINING & PREDICTION ALGORITHM",
+    name: "73NEURALNETWORK",
+    description: "73neuralnetwork is a data training and prediction algorithm built completely from scratch in the Julia programming language.",
+    techs: ["JULIA", "MATHS"],
+    link: "https://github.com/xe-4f14-5d3-6s2/73neuralnetwork",
+  }, {
+    img: p4img.src,
+    subname: "MINECRAFT RECIPE & CRAFTING SYSTEM",
+    name: "CRAFTINGTABLE",
+    description: "CraftingTable is a system to manage and simulate Minecraft crafting recipes in a fast, simple, and interactive way.",
+    techs: ["C"],
+    link: " https://github.com/xe-4f14-5d3-6s2/CraftingTable "
+  }, {
     img: p2img.src,
     subname:  "RSA ALGORITHM",
     name: "73RSA",
     description: "RSA generator and cipher built from scratch in Python. Ideal for studying cryptography and understanding how it works internally.",
-    techs: ["PYTHON", "MATH", "NUMPY"],
+    techs: ["PYTHON", "MATHS", "NUMPY"],
     link: "https://github.com/xe-4f14-5d3-6s2/73RSA"
   }, {
     img: p3img.src,
@@ -44,12 +58,5 @@ export const projects = [
     description: "Simple console-based TOTP generator using base32. Secure, fast, and perfect for learning about two-step authentication.",
     techs:["PYTHON", "FLASK"],
     link: "https://github.com/xe-4f14-5d3-6s2/2fa-codes-generator"
-  }, {
-    img: p4img.src,
-    subname: "CHAT FRONT END",
-    name: "LIVE CHAT",
-    description: "Live chat application with Websockets and a lightweight backend. Enables seamless real-time communication with multiple users.",
-    techs: ["TYPESCRIPT", "ASTRO"],
-    link:"https://github.com/xe-4f14-5d3-6s2/livehat"
   }
 ]
