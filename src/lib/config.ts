@@ -3,6 +3,7 @@ import p2img from "@/assets/projects/73rsa.webp"
 import p3img from "@/assets/projects/2fa.webp"
 import p4img from "@/assets/projects/craftingtable.webp"
 import p5img from "@/assets/projects/73neuronalnetwork.webp"
+import p6img from "@/assets/projects/thefederation.webp"
 
 export const settings = {
   title: "Tantalum",
@@ -23,6 +24,14 @@ export const skills = [
 ]
 
 export const projects = [
+  {
+    img: p6img.src,
+    subname: "IN GOLD WE TRUST.",
+    name: "THE FEDERATION",
+    description: "Law builds nations, but economy rules them. Survive the market, forge a monopoly or lead the federation.",
+    techs: ["PAPERMC", "MINECRAFT"],
+    link: "https://federationmc.com/"
+  },
   {
     img: p1img.src,
     subname: "VPS, DEDICATED & GAME SERVER HOSTING",
