@@ -5,12 +5,13 @@ import { socials } from "@/lib/config";
 import { Icon } from "astro-icon/components";
 ---
 
-<section id="about"
-  class="flex gap-10 min-h-dvh px-12 justify-center items-center bg-linear-to-b from-black to-gray-900"
+<section
+  id="about"
+  class="flex flex-col md:flex-row gap-10 min-h-dvh px-8 md:px-12 justify-center items-center bg-linear-to-b from-black to-gray-900"
 >
-  <div class="w-[50%] flex flex-col justify-between">
+  <div class="md:w-[50%] flex flex-col justify-between">
     <h2
-      class="text-6xl font-black text-left mb-10 bg-linear-to-r to-sky-300 from-indigo-700 bg-clip-text text-transparent"
+      class="text-4xl md:text-6xl font-black text-left mb-10 bg-linear-to-r to-sky-300 from-indigo-700 bg-clip-text text-transparent"
     >
       ABOUT ME
     </h2>
@@ -33,7 +34,7 @@ import { Icon } from "astro-icon/components";
       }
     </div>
   </div>
-  <div class="w-[50%]">
+  <div class="w-[50%] hidden md:flex">
     <img
       class="w-full object-contain rounded-4xl mask-x-from-70% mask-x-to-90% mask-y-from-70% mask-y-to-90%"
       src={pcimg.src}
