@@ -31,7 +31,7 @@ import { Icon } from "astro-icon/components";
     <div class="flex gap-6">
       {
         socials.map((social) => (
-          <a href={social.href} class="text-4xl">
+        <a href={social.href} class="text-4xl" target="_blank">
             <Icon name={social.icon} />
           </a>
         ))
