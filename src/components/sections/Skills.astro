@@ -4,14 +4,14 @@ import { skills } from "@/lib/config";
 
 <section
   id="arsenal"
-  class="bg-linear-to-b to-gray-900 from-black flex flex-col justify-center items-center p-6 md:p-12 min-h-dvh"
+  class="bg-linear-to-b to-gray-900 from-black flex flex-col justify-center items-center p-6 lg:p-12 min-h-dvh"
 >
   <h2 class="text-4xl font-black mb-12">ARSENAL</h2>
 
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
     {
       skills.map((skill) => (
-        <p class="transition text-gray-400 hover:text-white hover:border-gray-600 hover:bg-gray-900 md:text-lg text-sm font-bold tracking-wider border border-gray-900 px-6 py-3 md:px-12 md:py-6 text-center">
+        <p class="transition text-gray-400 hover:text-white hover:border-gray-600 hover:bg-gray-900 lg:text-lg text-sm font-bold tracking-wider border border-gray-900 px-6 py-3 lg:px-12 lg:py-6 text-center">
           {skill}
         </p>
       ))

@@ -6,9 +6,9 @@ import { projects } from "@/lib/config.ts";
 
 <section
   id="work"
-  class="flex flex-col p-8 md:p-12 bg-linear-to-b from-gray-900 to-black min-h-dvh"
+  class="flex flex-col p-8 lg:p-12 bg-linear-to-b from-gray-900 to-black min-h-dvh"
 >
-  <h2 class="text-4xl md:text-6xl font-black mb-12">
+  <h2 class="text-4xl lg:text-6xl font-black mb-12">
     RECENT <span class="text-indigo-700">MISSIONS</span>
   </h2>
 
@@ -16,7 +16,7 @@ import { projects } from "@/lib/config.ts";
     {
       projects.map((project, index) => (
         <Project
-          side={index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
+          side={index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}
           img={project.img}
           subname={project.subname}
           name={project.name}

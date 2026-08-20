@@ -14,25 +14,25 @@ const { img, subname, name, description, techs, link, side } = Astro.props;
 import { Icon } from "astro-icon/components";
 ---
 
-<div class={"flex flex-col md:gap-20 " + side}>
-  <div class="md:w-[50%]">
+<div class={"flex flex-col lg:gap-20 " + side}>
+  <div class="lg:w-[50%]">
     <img
       src={img}
       class="w-full rounded-4xl mask-x-from-70% mask-x-to-90% mask-y-from-70% mask-y-to-90%"
       alt={description}
     />
   </div>
-  <div class="md:w-[50%] flex flex-col text-left justify-between my-4">
-    <p class="mb-5 md:m-0 text-xl md:text-2xl tracking-wide leading-none font-bold text-indigo-200">{subname}</p>
-    <h3 class="mb-5 md:m-0 text-4xl md:text-5xl font-black">{name}</h3>
-    <p class="mb-5 md:m-0 text-xl md:text-2xl tracking-tighter leading-none text-gray-400 font-light">
+  <div class="lg:w-[50%] flex flex-col text-left justify-between my-4">
+    <p class="mb-5 lg:m-0 text-xl lg:text-2xl tracking-wide leading-none font-bold text-indigo-200">{subname}</p>
+    <h3 class="mb-5 lg:m-0 text-4xl lg:text-5xl font-black">{name}</h3>
+    <p class="mb-5 lg:m-0 text-xl lg:text-2xl tracking-tighter leading-none text-gray-400 font-light">
       {description}
     </p>
 
-    <div class="flex gap-5 mb-5 md:m-0">
+    <div class="flex gap-5 mb-5 lg:m-0">
       {
         techs.map((tech) => (
-          <p class="tracking-tight leading-0 flex items-center justify-center text-center p-4 border border-gray-400 text-xs md:text-sm rounded-sm">
+          <p class="tracking-tight leading-0 flex items-center justify-center text-center p-4 border border-gray-400 text-xs lg:text-sm rounded-sm">
             {tech}
           </p>
         ))
@@ -42,7 +42,7 @@ import { Icon } from "astro-icon/components";
     <a
       href={link}
       target="_blank"
-      class="transition hoverm:text-shadow-lg text-shadow-sky-300 flex gap-2 items-center text-2xl font-bold tracking-wider"
+      class="transition hover:text-shadow-lg text-shadow-sky-300 flex gap-2 items-center text-2xl font-bold tracking-wider"
       ><p>VIEW DETAILS</p> <Icon name="tabler:external-link" /></a
     >
   </div>
