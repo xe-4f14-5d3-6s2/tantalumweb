@@ -23,16 +23,22 @@ import { Icon } from "astro-icon/components";
     />
   </div>
   <div class="lg:w-[50%] flex flex-col text-left justify-between my-4">
-    <p class="mb-5 lg:m-0 text-xl lg:text-2xl tracking-wide leading-none font-bold text-indigo-200">{subname}</p>
-    <h3 class="mb-5 lg:m-0 text-4xl lg:text-5xl font-black">{name}</h3>
-    <p class="mb-5 lg:m-0 text-xl lg:text-2xl tracking-tighter leading-none text-gray-400 font-light">
+    <p
+      class="mb-5 lg:m-0 text-xl md:text-2xl tracking-wide leading-none font-bold text-indigo-200"
+    >
+      {subname}
+    </p>
+    <h3 class="mb-5 lg:m-0 text-4xl md:text-5xl font-black">{name}</h3>
+    <p
+      class="mb-5 lg:m-0 text-xl md:text-2xl tracking-tighter leading-none text-gray-400 font-light"
+    >
       {description}
     </p>
 
     <div class="flex gap-5 mb-5 lg:m-0">
       {
         techs.map((tech) => (
-          <p class="tracking-tight leading-0 flex items-center justify-center text-center p-4 border border-gray-400 text-xs lg:text-sm rounded-sm">
+          <p class="tracking-tight leading-0 flex items-center justify-center text-center p-4 border border-gray-400 text-xs md:text-sm rounded-sm">
             {tech}
           </p>
         ))
